@@ -59,6 +59,7 @@ func ListenAndServe(listener net.Listener, handler tcp.Handler, closeChan <-chan
 	for {
 		conn, err := listener.Accept()
 		if err != nil {
+			logger.Error("Error while listener accepting a new connection....")
 			break
 		}
 		logger.Info("accepted connection")
