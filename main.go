@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"gocache/config"
 	"gocache/lib/logger"
+	"gocache/resp/handler"
 	"gocache/tcp"
 	"os"
 )
@@ -39,7 +40,7 @@ func main() {
 		&tcp.Config{
 			Address: fmt.Sprintf("%s:%d", config.Properties.Bind, config.Properties.Port),
 		},
-		tcp.MakeHandler(),
+		handler.MakeHandler(),
 	)
 	if err != nil {
 		logger.Error(err)
