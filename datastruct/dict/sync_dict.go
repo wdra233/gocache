@@ -100,7 +100,7 @@ func (dict *SyncDict) RandomDistinctKeys(limit int) []string {
 	return result
 }
 
-func (dict *SyncDict) clear() {
+func (dict *SyncDict) Clear() {
 	*dict = *MakeSyncDict()
 }
 
