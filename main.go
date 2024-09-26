@@ -45,5 +45,6 @@ func main() {
 	if err != nil {
 		logger.Error(err)
 	}
-
+	logger.Info("tcp server set up success!")
+	logger.Info("add more logs....")
 }
